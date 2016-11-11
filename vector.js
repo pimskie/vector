@@ -79,7 +79,9 @@ class Vector {
 	}
 
 	set angle(a) {
-		this.x = Math.cos(a);
-		this.y = Math.sin(a);
+		const l = this.length;
+
+		this.x = Math.cos(a) * l;
+		this.y = Math.sin(a) * l;
 	};
 }
