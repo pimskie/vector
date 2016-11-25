@@ -10,8 +10,8 @@ class Vector {
 		this.y = y;
 	}
 
-	add(x, y) {
-		return new Vector(this.x + x, this.y + y);
+	add(vec) {
+		return new Vector(this.x + vec.x, this.y + vec.y);
 	}
 
 	addSelf(vec) {
