@@ -63,6 +63,10 @@ class Vector {
 		}
 	}
 
+	clone() { 
+		return new Vector(this.x, this.y);
+	};
+
 	get length() {
 		return Math.sqrt(this.x * this.x + this.y * this.y);
 	};
