@@ -17,6 +17,8 @@ class Vector {
 	addSelf(vec) {
 		this.x += vec.x;
 		this.y += vec.y;
+
+		return this;
 	}
 
 	subtract(vec) {
@@ -26,6 +28,8 @@ class Vector {
 	substractSelf(vec) {
 		this.x -= vec.x;
 		this.y -= vec.y;
+
+		return this;
 	}
 
 	divide(val) {
@@ -35,6 +39,8 @@ class Vector {
 	divideSelf(val) {
 		this.x = this.x / val;
 		this.y = this.y / val;
+		
+		return this;
 	};
 
 	multiply(val) {
@@ -44,6 +50,8 @@ class Vector {
 	multiplySelf(val) {
 		this.x *= val;
 		this.y *= val;
+
+		return this;
 	};
 
 	normalize() {
@@ -51,6 +59,8 @@ class Vector {
 
 		this.x *= len;
 		this.y *= len;
+
+		return this;
 	}
 
 	// https://github.com/processing/p5.js/blob/master/src/math/p5.Vector.js#L536
@@ -61,9 +71,11 @@ class Vector {
 			this.divideSelf(Math.sqrt(length)); //normalize it
 			this.multiplySelf(max);
 		}
+
+		return this;
 	}
 
-	clone() { 
+	clone() {
 		return new Vector(this.x, this.y);
 	};
 
