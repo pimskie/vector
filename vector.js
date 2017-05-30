@@ -25,7 +25,7 @@ class Vector {
 		return new Vector(this.x - vec.x, this.y - vec.y);
 	};
 
-	substractSelf(vec) {
+	subtractSelf(vec) {
 		this.x -= vec.x;
 		this.y -= vec.y;
 
