@@ -39,7 +39,7 @@ class Vector {
 	divideSelf(val) {
 		this.x = this.x / val;
 		this.y = this.y / val;
-		
+
 		return this;
 	};
 
@@ -54,7 +54,12 @@ class Vector {
 		return this;
 	};
 
+	// https://github.com/processing/p5.js/blob/master/src/math/p5.Vector.js#L514
 	normalize() {
+		if (this.length === 0) {
+			return this;
+		}
+
 		const len = 1 / this.length;
 
 		this.x *= len;
