@@ -111,3 +111,5 @@ class Vector {
 		this.y = Math.sin(a) * l;
 	};
 }
+
+export default Vector;
